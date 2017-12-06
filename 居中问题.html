@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 400px;
+            height: 300px;
+            background: #cccccc;
+            text-align: center;
+            line-height: 300px;
+            margin-bottom: 50px;
+        }
+        span{
+            background: #ff0000;
+        }
+        #outer{
+            width: 500px;
+            height: 300px;
+            background: #ff0000;
+            position: relative;
+
+        }
+        #inner{
+            width: 200px;
+            height: 100px;
+            background: #00ff00;
+            /*margin: 0 auto;*/
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 50%;
+            margin-left: -100px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        1. 行元素
+            水平居中：给父元素加text-align: center;
+            垂直居中：line-height: 和高一样的值
+        2. 块元素
+            水平居中：给该元素加margin: 0 auto;
+            垂直居中：没有直接语法
+            如果元素定位了，就只能通过下面的方式：
+            posisiton: absolute;
+            left: 50%;
+            margin-left: 负的宽度的一半; //这个必须是在已知宽高的情况下
+            transform: translateX(-50%); //不需要知道宽和高，但是IE8-不支持
+            top: 50%;
+            margin-top: 负的高度的一半;
+            transform: translateY(-50%);
+    -->
+
+    <div id="div1">
+        <span>哈哈哈</span>
+    </div>
+
+    <div id="outer">
+        <div id="inner">inner</div>
+    </div>
+
+    <h1>hahaah</h1>
+
+</body>
+</html>
