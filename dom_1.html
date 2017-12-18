@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <div id="div1">这是div</div>
+
+    <script>
+        var btn1 = document.getElementById('btn');
+        var div1 = document.getElementById('div1');
+        /*btn1.id = 'aa';
+        console.log(btn1.id);*/
+        btn1.onclick = function () {
+//            div1.style.background = 'green';
+            div1.style.position = 'absolute';
+//            div1.style.left = '300px';
+            var timer = setInterval(function () {
+                div1.style.left = div1.offsetLeft + 10 + 'px';
+                console.log(div1.offsetLeft);
+                if(div1.offsetLeft >= 300){
+                    clearInterval(timer);
+                }
+            }, 30);
+        }
+
+        div1.onmouseover = function () {
+            div1.style.background = 'green';
+        }
+        div1.onmouseout = function () {
+            div1.style.background = 'red';
+        }
+    </script>
+</body>
+</html>
