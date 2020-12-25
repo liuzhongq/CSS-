@@ -1,0 +1,6 @@
+img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+CSS图片水平垂直居中
